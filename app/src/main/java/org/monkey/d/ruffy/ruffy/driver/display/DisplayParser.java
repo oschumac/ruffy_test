@@ -1,5 +1,7 @@
 package org.monkey.d.ruffy.ruffy.driver.display;
 
+import android.util.Log;
+
 import org.monkey.d.ruffy.ruffy.driver.display.parser.LargeTextParser;
 import org.monkey.d.ruffy.ruffy.driver.display.menu.MenuFactory;
 import org.monkey.d.ruffy.ruffy.driver.display.parser.SmallTextParser;
@@ -83,7 +85,7 @@ public class DisplayParser {
             int nct = 0;
             for(int i=0;i<4;i++)nct+=tokens[i].size();
             if(nct>0 && menu!= null){
-                //Log.v("tokens",nct+" toks not consumed in "+menu.getType());
+                Log.v("tokens",nct+" toks not consumed in "+menu.getType());
             }
 
         }catch(Throwable e){e.printStackTrace();/*Log.e("Tokens","error...",e);*/}

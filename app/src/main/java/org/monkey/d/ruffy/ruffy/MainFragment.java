@@ -13,6 +13,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -77,7 +78,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             {
                 if(getActivity().bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE))
                 {
-                    //Log.v("Start","bound it");
+                    Log.v("Start","bound it");
                 }
             }
         }
@@ -109,7 +110,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 }
             }catch(RemoteException e){
                 e.printStackTrace();
-                //Log.e("Main","add Handler: ",e);
+                Log.e("Main","add Handler: ",e);
             }
         }
     };
@@ -576,7 +577,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         {
             if(getActivity().bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE))
             {
-                //Log.v("Start","bound it");
+                Log.v("Start","bound it");
             }
         }
         pumpPanel = v.findViewById(R.id.pumpPanel);
